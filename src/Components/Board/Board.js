@@ -45,6 +45,7 @@ const Board = (props) => {
 
     squares[index] = squareIsClick.xIsNext ? "X" : "O";
     setSquareIsClick({ squares: squares, xIsNext: !squareIsClick.xIsNext });
+    props.onChangeHistory(squareIsClick);
   };
   const arr = [];
   for (let i = 0; i < 9; i++) {
